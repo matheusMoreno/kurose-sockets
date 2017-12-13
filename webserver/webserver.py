@@ -16,7 +16,7 @@ while True:
 
     try:
         # Recieve message and check file name
-        message = connectionSocket.recv(2**16).decode()
+        message = connectionSocket.recv(2048).decode()
         filename = message.split()[1]
         f = open(filename[1:], 'r')
         outputdata = f.read()
